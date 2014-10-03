@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           livereload: true
 
       js:
-        files: "**/*.js"
+        files: "client/**/*.js"
         tasks: ["exec"]
         options:
           livereload: true
@@ -77,7 +77,6 @@ module.exports = (grunt) ->
   grunt.registerTask "default", [
     "less:dev"
     "exec"
-    "express"
     "watch"
   ]
   grunt.registerTask "prod", [

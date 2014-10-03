@@ -71,6 +71,9 @@ var Posts = React.createClass({
               <Link className='posts_edit-link' to="post" postId={post._id}>
                 <i className='fa fa-pencil'/>
               </Link>
+              <Link className='posts_remove-link' to="removepost" postId={post._id}>
+                <i className='fa fa-times'/>
+              </Link>
             </li>
           )
         }
