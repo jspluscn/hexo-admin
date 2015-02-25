@@ -84,12 +84,14 @@ module.exports = function (app) {
     var parts = url.split('/')
     var last = parts[parts.length-1]
     if (last === 'publish') {
+      console.log('publish');
       return publish(parts[parts.length-2], req.body, res)
     }
     if (last === 'unpublish') {
       return unpublish(parts[parts.length-2], req.body, res)
     }
     if (last === 'remove') {
+      console.log('remove');
       return remove(parts[parts.length-2], req.body, res)
     }
 
@@ -154,6 +156,9 @@ function remove(id, body, res) {
     }
     res.done(addIsDraft(post))
   })
+  hexo.call('clean');
+  hexo.call('server', {d:true});
+  console.log('cleaned');
 }
 
 function publish(id, body, res) {

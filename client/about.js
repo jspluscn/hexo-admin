@@ -3,7 +3,7 @@ var React = require('react')
 var About = React.createClass({
   render: function () {
     return <div className="about">
-      <h1>This is the Hexo Admin Plugin</h1>
+      <h1>This is the Hexo Admin Plugin -- modified by Icer</h1>
       <p><strong>Goal: Provide an awesome admin experience for managing your blog.</strong></p>
       <p>
         Useful links:

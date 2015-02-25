@@ -65,5 +65,7 @@ module.exports = function (id, update, callback) {
       });
     });
   });
+  hexo.call('clean');
+  console.log('cleaned');
 }
 
